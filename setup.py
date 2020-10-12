@@ -18,5 +18,11 @@ setuptools.setup(
         "License :: OSI Approved :: GNU GPLv3 License",
         "Operating System :: OS Independent",
     ],
+    install_requires=[
+        'astropy',
+        'astroquery',
+        'numpy',
+        'scipy',
+    ],
     python_requires='>=3.6',
 )
