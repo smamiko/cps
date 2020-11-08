@@ -19,7 +19,7 @@ def test_images_and_headers():
 
     data = ds.images()
     plt.imshow(data[0])
-    plt.show()
+    # plt.show()
 
 def test_masks_and_background():
     ds = data_source(SkyView, position='Eta Carinae', survey='DSS')
