@@ -1,0 +1,2 @@
+Test adding a file to a folked repository.
+This file should be in https://github.com/smamiko/cps.git
