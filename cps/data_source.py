@@ -1,4 +1,5 @@
 # from cps import annulus_class
+import requests
 import logging
 import numpy as np
 import astropy.units as u
@@ -168,3 +169,12 @@ class DataSource:
                 info['background_flux'] = bkgs[idx]
 
         return infos
+    @staticmethod
+    def download(url: str, to_file: bool = False):
+
+        r = requests.get(url)
+
+        if to_file:
+            fname = url.split('/')[-1]
+            with open (f"{fname}.fits", "w") as fout:
+                fout.write(r.content)
